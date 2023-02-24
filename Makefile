@@ -80,7 +80,7 @@ npm: brew-packages
 	$(FNM_BIN) install --lts
 
 brew-packages: brew
-	$(BREW_BIN) bundle --file=$(DOTFILES_DIR)/install/Brewfile || true
+	$(BREW_BIN) bundle --file=$(DOTFILES_DIR)/install/Brewfile --no-lock || true
 
 cask-apps: brew
 	$(BREW_BIN) bundle --file=$(DOTFILES_DIR)/install/Caskfile || true
