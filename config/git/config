@@ -6,6 +6,7 @@
 	user = rbsummers
 
 [core]
+	editor = code --wait
 	excludesfile = ~/.config/git/ignore
 
 [credential]
@@ -16,3 +17,25 @@
 
 [init]
 	defaultBranch = master
+
+[diff]
+	tool = difftastic
+	external = difft
+
+[difftool]
+	prompt = false
+
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+
+[difftool "vscode-difftool"]
+	cmd = code --wait --diff "$LOCAL" "$REMOTE"
+
+[merge]
+	tool = vscode-mergetool
+
+[mergetool "vscode-mergetool"]
+	cmd = code --wait --diff "$MERGED"
+
+[pager]
+	difftool = true
