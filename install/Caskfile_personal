@@ -1,0 +1,10 @@
+# Personal use
+cask "discord"
+cask "google-drive"
+cask "keepassxc"
+cask "spotify"
+cask "steam"
+cask "vlc"
+
+# Experimenting
+cask "raycast"
