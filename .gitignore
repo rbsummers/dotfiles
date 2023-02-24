@@ -1,2 +1,5 @@
 system/.custom
 system/.exports
+
+install/Brewfile.lock.json
+**__pycache__**
