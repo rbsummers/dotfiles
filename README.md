@@ -64,15 +64,15 @@ The installation process in the Makefile is tested on every push and every week 
 
 ## Post-Installation
 
-- `dot dock` (set [Dock items](./macos/dock.sh))
-- `dot macos` (set [macOS defaults](./macos/defaults.sh))
-- Start `Hammerspoon` once and set "Launch Hammerspoon at login"
 - Make GitHub SSH key on new laptop (https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent):
   - `ssh-keygen -t ed25519 -C "<mail@address.com>"`
   - If you didn't set the default file name, run `ssh-add ~/.ssh/<file>` so the agent finds it.
   - Log into Github and add the key there.
   - Change repo's remote `origin` so it now uses ssh `git remote set-url origin ssh://git@github.com/rbsummers/dotfiles`.
 - `touch ~/.dotfiles/system/.exports` and populate this file with tokens (e.g. `export GITHUB_TOKEN=abc`)
+- `dot dock` (set [Dock items](./macos/dock.sh))
+- `dot macos` (set [macOS defaults](./macos/defaults.sh))
+- Start `Hammerspoon` once and set "Launch Hammerspoon at login"
 - https://www.synaptics.com/products/displaylink-graphics/downloads/macos
 - Log into Google Drive and sync folder.
 
