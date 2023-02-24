@@ -9,6 +9,7 @@ BREW_BIN := $(HOMEBREW_PREFIX)/bin/brew
 CARGO_BIN := $(HOMEBREW_PREFIX)/bin/cargo
 FNM_BIN := $(HOMEBREW_PREFIX)/bin/fnm
 STOW_BIN := $(HOMEBREW_PREFIX)/bin/stow
+PERSONAL_IDENTITY_FILE := $(HOME)/.ssh/github_personal_id_ed25519
 export XDG_CONFIG_HOME = $(HOME)/.config
 export STOW_DIR = $(DOTFILES_DIR)
 export ACCEPT_EULA=Y
@@ -90,6 +91,11 @@ cask-apps: brew
 
 node-packages: npm
 	eval $$(fnm env); npm install -g $(shell cat install/npmfile)
+
+ssh:
+	ssh-keygen -t ed25519 -C "$(PERSONAL_MAIL)" -P "" -q -f $(PERSONAL_IDENTITY_FILE)
+	ssh-add $(PERSONAL_IDENTITY_FILE)
+	$(DOTFILES_DIR)/bin/append "\\nInclude ~/.config/ssh/github_personal_config\\n" ~/.ssh/config
 
 test:
 	eval $$(fnm env); bats test
