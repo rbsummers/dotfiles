@@ -4,6 +4,11 @@
     "explorer.autoReveal": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "files.trimTrailingWhitespace": true,
+    "git.showActionButton": {
+        "commit": false,
+        "publish": false,
+        "sync": false
+    },
     "gitlens.showWelcomeOnInstall": false,
     "gitlens.showWhatsNewAfterUpgrades": false,
     "redhat.telemetry.enabled": false,
