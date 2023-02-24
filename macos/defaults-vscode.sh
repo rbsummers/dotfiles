@@ -1,0 +1,6 @@
+DOTFILES_DIR="${HOME}/.dotfiles"
+SAVED_CONFIG_FOLDER="${DOTFILES_DIR}/config/vscode"
+VSCODE_CONFIG_FOLDER="${HOME}/Library/Application Support/Code/User"
+SETTINGS_FILE="settings.json"
+
+ln -s "${SAVED_CONFIG_FOLDER}/${SETTINGS_FILE}" "${VSCODE_CONFIG_FOLDER}/${SETTINGS_FILE}"
