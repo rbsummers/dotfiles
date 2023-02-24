@@ -2,9 +2,9 @@ adpyke.codesnap
 dbaeumer.vscode-eslint
 eamodio.gitlens
 esbenp.prettier-vscode
-hediet.vscode-drawio
 naumovs.color-highlight
 redhat.vscode-yaml
-ritwickdey.liveserver
 sharat.vscode-brewfile
 stkb.rewrap
+ms-vscode.makefile-tools
+ms-python.python

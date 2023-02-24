@@ -21,7 +21,7 @@ macos: sudo core-macos packages link
 
 linux: core-linux link
 
-core-macos: brew bash git npm ruby rust
+core-macos: brew git npm
 
 core-linux:
 	apt-get update
@@ -40,7 +40,7 @@ ifndef GITHUB_ACTION
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 endif
 
-packages: brew-packages cask-apps node-packages rust-packages
+packages: brew-packages cask-apps node-packages
 
 link: stow-$(OS)
 	for FILE in $$(\ls -A runcom); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then \
@@ -74,31 +74,22 @@ else
 endif
 
 git: brew
-	$(BREW_BIN) install git git-extras
+	$(BREW_BIN) install git
 
 npm: brew-packages
 	$(FNM_BIN) install --lts
-
-ruby: brew
-	$(BREW_BIN) install ruby
-
-rust: brew
-	$(BREW_BIN) install rust
 
 brew-packages: brew
 	$(BREW_BIN) bundle --file=$(DOTFILES_DIR)/install/Brewfile || true
 
 cask-apps: brew
 	$(BREW_BIN) bundle --file=$(DOTFILES_DIR)/install/Caskfile || true
-	defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+	defaults write org.hammerspoon.Hammerspoon MJConfigFile "$(DOTFILES_DIR)/config/hammerspoon/init.lua"
 	for EXT in $$(cat install/Codefile); do code --install-extension $$EXT; done
 	xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
 node-packages: npm
 	eval $$(fnm env); npm install -g $(shell cat install/npmfile)
-
-rust-packages: rust
-	$(CARGO_BIN) install $(shell cat install/Rustfile)
 
 test:
 	eval $$(fnm env); bats test

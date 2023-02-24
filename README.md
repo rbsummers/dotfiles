@@ -1,4 +1,4 @@
-# .files
+# dotfiles
 
 These are my dotfiles. Take anything you want, but at your own risk.
 
@@ -74,6 +74,7 @@ The installation process in the Makefile is tested on every push and every week 
   - `mackup restore`
 - Start `Hammerspoon` once and set "Launch Hammerspoon at login"
 - `touch ~/.dotfiles/system/.exports` and populate this file with tokens (e.g. `export GITHUB_TOKEN=abc`)
+- https://www.synaptics.com/products/displaylink-graphics/downloads/macos
 
 ## The `dotfiles` command
 
