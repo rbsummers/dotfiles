@@ -1,0 +1,15 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.accessibilitySupport": "off",
+    "explorer.autoReveal": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "gitlens.showWelcomeOnInstall": false,
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "redhat.telemetry.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "window.commandCenter": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.quickOpen.closeOnFocusLost": false,
+    "workbench.startupEditor": "none"
+}

@@ -68,10 +68,6 @@ The installation process in the Makefile is tested on every push and every week 
 
 - `dot dock` (set [Dock items](./macos/dock.sh))
 - `dot macos` (set [macOS defaults](./macos/defaults.sh))
-- Mackup
-  - Log in to Dropbox (and wait until synced)
-  - `cd && ln -s ~/.config/mackup/.mackup.cfg ~`
-  - `mackup restore`
 - Start `Hammerspoon` once and set "Launch Hammerspoon at login"
 - `touch ~/.dotfiles/system/.exports` and populate this file with tokens (e.g. `export GITHUB_TOKEN=abc`)
 - https://www.synaptics.com/products/displaylink-graphics/downloads/macos
@@ -83,12 +79,11 @@ $ dot help
 Usage: dot <command>
 
 Commands:
-    clean            Clean up caches (brew, npm, gem, rvm)
+    clean            Clean up caches
     dock             Apply macOS Dock settings
-    edit             Open dotfiles in IDE (code) and Git GUI (stree)
+    edit             Open dotfiles in IDE (code)
     help             This help message
     macos            Apply macOS system defaults
-    test             Run tests
     update           Alias for topgrade
 ```
 
