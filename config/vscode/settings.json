@@ -14,6 +14,11 @@
     "redhat.telemetry.enabled": false,
     "telemetry.telemetryLevel": "off",
     "window.commandCenter": false,
+    "workbench.colorCustomizations": {
+      "activityBarBadge.background": "#0000",
+      "activityBarBadge.foreground": "#0000",
+      "editorWhitespace.foreground": "#80808090"
+    },
     "workbench.editor.enablePreview": false,
     "workbench.quickOpen.closeOnFocusLost": false,
     "workbench.startupEditor": "none"
