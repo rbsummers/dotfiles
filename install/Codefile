@@ -8,3 +8,6 @@ sharat.vscode-brewfile
 stkb.rewrap
 ms-vscode.makefile-tools
 ms-python.python
+EditorConfig.EditorConfig
+yaruson.ascii-unicode-escape
+mikestead.dotenv
