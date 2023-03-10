@@ -1,6 +1,8 @@
 # dotfiles
 
-These are my dotfiles. Take anything you want, but at your own risk.
+These are my dotfiles. They are forked from https://github.com/webpro/dotfiles and heavily customized.
+
+Take anything you want, but at your own risk.
 
 It mainly targets macOS systems (but it works on at least Ubuntu as well).
 
@@ -12,10 +14,6 @@ It mainly targets macOS systems (but it works on at least Ubuntu as well).
 - Fast and colored prompt
 - Updated macOS defaults
 - Well-organized and easy to customize
-- The installation and runcom setup is [tested weekly on real Ubuntu and macOS
-  machines](https://github.com/webpro/dotfiles/actions) (Big Sur and Monterey;
-  Catalina should still be fine too) using [a GitHub
-  Action](./.github/workflows/dotfiles-installation.yml)
 - Supports both Apple Silicon (M1) and Intel chips
 
 ## Packages Overview
@@ -48,7 +46,7 @@ This will clone or download this repo to `~/.dotfiles` (depending on the availab
 1. Alternatively, clone manually into the desired location:
 
 ```bash
-git clone https://github.com/webpro/dotfiles.git ~/.dotfiles
+git clone https://github.com/rbsummers/dotfiles.git ~/.dotfiles
 ```
 
 Use the [Makefile](./Makefile) to install the [packages listed above](#packages-overview), and symlink
@@ -58,9 +56,6 @@ Use the [Makefile](./Makefile) to install the [packages listed above](#packages-
 cd ~/.dotfiles
 make
 ```
-
-The installation process in the Makefile is tested on every push and every week in this
-[GitHub Action](https://github.com/webpro/dotfiles/actions).
 
 ## Post-Installation
 
@@ -98,3 +93,7 @@ To customize the dotfiles to your likings, fork it and make sure to modify the l
 ## Credits
 
 Many thanks to the [dotfiles community](https://dotfiles.github.io).
+
+## TODO
+
+* Oh my zsh + plugins (`plugins=(aliases asdf docker docker-compose git thefuck you-should-use z)`) + theme (`ZSH_THEME="powerlevel10k/powerlevel10k"`)
